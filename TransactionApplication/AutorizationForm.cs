@@ -48,6 +48,11 @@ namespace TransactionApplication
         private void UsernameBox_Click(object sender, EventArgs e)
         {
             isLoginClicked = true;
+            if (PasswordTextBox.Text == "")
+            {
+                PasswordTextBox.Text = "********";
+                isPasswordClicked = false;
+            }
         }
 
         private void BackgroundPanel_Click(object sender, EventArgs e)
@@ -98,6 +103,11 @@ namespace TransactionApplication
         private void PasswordTextBox_Click(object sender, EventArgs e)
         {
             isPasswordClicked = true;
+            if (UsernameBox.Text == "")
+            {
+                UsernameBox.Text = "Username";
+                isLoginClicked = false;
+            }
         }
     }
 }

@@ -32,12 +32,15 @@
             this.UsernameBox = new System.Windows.Forms.TextBox();
             this.CloseButton = new System.Windows.Forms.Button();
             this.BackgroundPanel = new System.Windows.Forms.Panel();
+            this.SignInButton = new System.Windows.Forms.Button();
+            this.BackgroundPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // PasswordTextBox
             // 
             this.PasswordTextBox.Font = new System.Drawing.Font("Arial", 24F);
-            this.PasswordTextBox.Location = new System.Drawing.Point(100, 308);
+            this.PasswordTextBox.Location = new System.Drawing.Point(100, 310);
+            this.PasswordTextBox.MaxLength = 17;
             this.PasswordTextBox.MinimumSize = new System.Drawing.Size(241, 39);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(340, 44);
@@ -53,7 +56,8 @@
             this.UsernameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UsernameBox.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.UsernameBox.ForeColor = System.Drawing.Color.Black;
-            this.UsernameBox.Location = new System.Drawing.Point(100, 217);
+            this.UsernameBox.Location = new System.Drawing.Point(100, 240);
+            this.UsernameBox.MaxLength = 17;
             this.UsernameBox.Multiline = true;
             this.UsernameBox.Name = "UsernameBox";
             this.UsernameBox.Size = new System.Drawing.Size(340, 40);
@@ -84,6 +88,7 @@
             // BackgroundPanel
             // 
             this.BackgroundPanel.BackgroundImage = global::TransactionApplication.Properties.Resources.autorizationPhoto;
+            this.BackgroundPanel.Controls.Add(this.SignInButton);
             this.BackgroundPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BackgroundPanel.Location = new System.Drawing.Point(0, 0);
             this.BackgroundPanel.Name = "BackgroundPanel";
@@ -92,6 +97,17 @@
             this.BackgroundPanel.Click += new System.EventHandler(this.BackgroundPanel_Click);
             this.BackgroundPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BackgroundPanel_MouseDown);
             this.BackgroundPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BackgroundPanel_MouseMove);
+            // 
+            // SignInButton
+            // 
+            this.SignInButton.AutoSize = true;
+            this.SignInButton.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SignInButton.Location = new System.Drawing.Point(190, 450);
+            this.SignInButton.Name = "SignInButton";
+            this.SignInButton.Size = new System.Drawing.Size(160, 60);
+            this.SignInButton.TabIndex = 0;
+            this.SignInButton.Text = "Sign in";
+            this.SignInButton.UseVisualStyleBackColor = true;
             // 
             // AutorizationForm
             // 
@@ -106,6 +122,8 @@
             this.Name = "AutorizationForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.AutorizationForm_Load);
+            this.BackgroundPanel.ResumeLayout(false);
+            this.BackgroundPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,6 +134,7 @@
         private System.Windows.Forms.TextBox UsernameBox;
         private System.Windows.Forms.Button CloseButton;
         private System.Windows.Forms.Panel BackgroundPanel;
+        private System.Windows.Forms.Button SignInButton;
     }
 }
 
