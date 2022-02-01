@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -108,6 +109,30 @@ namespace TransactionApplication
                 UsernameBox.Text = "Username";
                 isLoginClicked = false;
             }
+        }
+
+        private void SignInButton_Click(object sender, EventArgs e)
+        {
+            string userLogin = UsernameBox.Text;
+            string userPassword = PasswordTextBox.Text;
+
+            DB db = new DB();
+
+            DataTable table = new DataTable();
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @uL AND `password` = @uP", db.GetConnection());
+            command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = userLogin;
+            command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = userPassword;
+
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            if (table.Rows.Count > 0)
+                MessageBox.Show("Yes");
+            else
+                MessageBox.Show("No");
         }
     }
 }

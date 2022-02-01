@@ -108,6 +108,7 @@
             this.SignInButton.TabIndex = 0;
             this.SignInButton.Text = "Sign in";
             this.SignInButton.UseVisualStyleBackColor = true;
+            this.SignInButton.Click += new System.EventHandler(this.SignInButton_Click);
             // 
             // AutorizationForm
             // 
