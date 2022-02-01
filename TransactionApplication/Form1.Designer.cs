@@ -36,9 +36,11 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(148, 308);
+            this.textBox1.MinimumSize = new System.Drawing.Size(241, 39);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(241, 20);
             this.textBox1.TabIndex = 6;
+            this.textBox1.UseSystemPasswordChar = true;
             // 
             // UsernameBox
             // 
@@ -85,6 +87,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Click += new System.EventHandler(this.Form1_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 

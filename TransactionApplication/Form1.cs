@@ -15,6 +15,7 @@ namespace TransactionApplication
         public Form1()
         {
             InitializeComponent();
+            textBox1.Size = new Size(241, 39);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -53,6 +54,11 @@ namespace TransactionApplication
         }
 
         private void Background_MouseLeave(object sender, EventArgs e)
+        {
+            UsernameBox.Text = "Fasfas";
+        }
+
+        private void Form1_Click(object sender, EventArgs e)
         {
             UsernameBox.Text = "Fasfas";
         }
