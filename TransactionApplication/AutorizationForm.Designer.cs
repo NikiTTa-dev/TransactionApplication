@@ -1,6 +1,6 @@
 ﻿namespace TransactionApplication
 {
-    partial class Form1
+    partial class AutorizationForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,34 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.UsernameBox = new System.Windows.Forms.TextBox();
             this.CloseButton = new System.Windows.Forms.Button();
+            this.BackgroundPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // textBox1
+            // PasswordTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(148, 308);
-            this.textBox1.MinimumSize = new System.Drawing.Size(241, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(241, 20);
-            this.textBox1.TabIndex = 6;
-            this.textBox1.UseSystemPasswordChar = true;
+            this.PasswordTextBox.Font = new System.Drawing.Font("Arial", 24F);
+            this.PasswordTextBox.Location = new System.Drawing.Point(148, 308);
+            this.PasswordTextBox.MinimumSize = new System.Drawing.Size(241, 39);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.Size = new System.Drawing.Size(241, 44);
+            this.PasswordTextBox.TabIndex = 6;
+            this.PasswordTextBox.Text = "********";
+            this.PasswordTextBox.UseSystemPasswordChar = true;
+            this.PasswordTextBox.Click += new System.EventHandler(this.PasswordTextBox_Click);
+            this.PasswordTextBox.MouseEnter += new System.EventHandler(this.PasswordTextBox_MouseEnter);
+            this.PasswordTextBox.MouseLeave += new System.EventHandler(this.PasswordTextBox_MouseLeave);
             // 
             // UsernameBox
             // 
             this.UsernameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UsernameBox.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.UsernameBox.ForeColor = System.Drawing.Color.Gray;
+            this.UsernameBox.ForeColor = System.Drawing.Color.Black;
             this.UsernameBox.Location = new System.Drawing.Point(148, 217);
             this.UsernameBox.Multiline = true;
             this.UsernameBox.Name = "UsernameBox";
             this.UsernameBox.Size = new System.Drawing.Size(241, 39);
             this.UsernameBox.TabIndex = 5;
             this.UsernameBox.Text = "Username";
-            this.UsernameBox.Click += new System.EventHandler(this.UsernameBox_Click_1);
-            this.UsernameBox.MouseEnter += new System.EventHandler(this.UsernameBox_MouseEnter_1);
-            this.UsernameBox.MouseLeave += new System.EventHandler(this.UsernameBox_MouseLeave_1);
+            this.UsernameBox.Click += new System.EventHandler(this.UsernameBox_Click);
+            this.UsernameBox.MouseEnter += new System.EventHandler(this.UsernameBox_MouseEnter);
+            this.UsernameBox.MouseLeave += new System.EventHandler(this.UsernameBox_MouseLeave);
             // 
             // CloseButton
             // 
@@ -75,28 +81,41 @@
             this.CloseButton.UseVisualStyleBackColor = false;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
-            // Form1
+            // BackgroundPanel
+            // 
+            this.BackgroundPanel.BackgroundImage = global::TransactionApplication.Properties.Resources.autorizationPhoto;
+            this.BackgroundPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BackgroundPanel.Location = new System.Drawing.Point(0, 0);
+            this.BackgroundPanel.Name = "BackgroundPanel";
+            this.BackgroundPanel.Size = new System.Drawing.Size(540, 600);
+            this.BackgroundPanel.TabIndex = 7;
+            this.BackgroundPanel.Click += new System.EventHandler(this.BackgroundPanel_Click);
+            this.BackgroundPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BackgroundPanel_MouseDown);
+            this.BackgroundPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BackgroundPanel_MouseMove);
+            // 
+            // AutorizationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(540, 573);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(540, 600);
+            this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.UsernameBox);
             this.Controls.Add(this.CloseButton);
+            this.Controls.Add(this.BackgroundPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "AutorizationForm";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.Click += new System.EventHandler(this.Form1_Click);
+            this.Load += new System.EventHandler(this.AutorizationForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.TextBox UsernameBox;
         private System.Windows.Forms.Button CloseButton;
+        private System.Windows.Forms.Panel BackgroundPanel;
     }
 }
 
