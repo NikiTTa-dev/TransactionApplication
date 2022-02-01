@@ -16,7 +16,7 @@ namespace TransactionApplication
         {
             InitializeComponent();
             this.PasswordTextBox.AutoSize = false;
-            this.PasswordTextBox.Size = new Size(241, 39);
+            this.PasswordTextBox.Size = new Size(UsernameBox.Size.Width, UsernameBox.Size.Height);
         }
 
         private void AutorizationForm_Load(object sender, EventArgs e)

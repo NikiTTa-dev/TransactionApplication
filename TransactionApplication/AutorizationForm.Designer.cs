@@ -37,10 +37,10 @@
             // PasswordTextBox
             // 
             this.PasswordTextBox.Font = new System.Drawing.Font("Arial", 24F);
-            this.PasswordTextBox.Location = new System.Drawing.Point(148, 308);
+            this.PasswordTextBox.Location = new System.Drawing.Point(100, 308);
             this.PasswordTextBox.MinimumSize = new System.Drawing.Size(241, 39);
             this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(241, 44);
+            this.PasswordTextBox.Size = new System.Drawing.Size(340, 44);
             this.PasswordTextBox.TabIndex = 6;
             this.PasswordTextBox.Text = "********";
             this.PasswordTextBox.UseSystemPasswordChar = true;
@@ -53,10 +53,10 @@
             this.UsernameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UsernameBox.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.UsernameBox.ForeColor = System.Drawing.Color.Black;
-            this.UsernameBox.Location = new System.Drawing.Point(148, 217);
+            this.UsernameBox.Location = new System.Drawing.Point(100, 217);
             this.UsernameBox.Multiline = true;
             this.UsernameBox.Name = "UsernameBox";
-            this.UsernameBox.Size = new System.Drawing.Size(241, 39);
+            this.UsernameBox.Size = new System.Drawing.Size(340, 40);
             this.UsernameBox.TabIndex = 5;
             this.UsernameBox.Text = "Username";
             this.UsernameBox.Click += new System.EventHandler(this.UsernameBox_Click);
